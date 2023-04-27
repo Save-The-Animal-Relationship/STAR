@@ -3,7 +3,7 @@ package com.star.user.dao;
 import org.apache.ibatis.session.SqlSession;
 
 import com.star.mybatis.config.MyBatisConfig;
-import com.star.user.domain.UserAdminVO;
+import com.star.user.domain.UserVO;
 
 public class UserAdminDAO {
 	public SqlSession sqlSession;
@@ -13,7 +13,7 @@ public class UserAdminDAO {
 	}
 
 //	회원정보 조회
-	public UserAdminVO select(Long userNumber) {
+	public UserVO select(Long userNumber) {
 		return sqlSession.selectOne("user.select", userNumber);
 	}
 	

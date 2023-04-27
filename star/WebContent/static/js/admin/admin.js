@@ -10,28 +10,23 @@ function showList() {
 
 	users.forEach(users => {
 		text += `
-		<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td>${users.userNumber}</td>
-					<td>${users.userName}</td>
-					<td>${users.userId}</td>
-					<td>${users.userAddress1}</td>
-					<td>${users.userAge}</td>
-					<td>${users.userGender}</td>
-					<td>${users.userPhonenumber}</td>
-					<td>${users.userEmail}</td>
+		<td><input type="checkbox" name="delete-report" class="term"/>
+		<tr>
+					<td><input type="checkbox" name="delete-report" class="term"/></td>
+					<td><c:out value = "${user.userNumber}"/></td>
+					<td><c:out value = "${user.userName}"/></td>
+					<td><c:out value = "${user.userId}"/></td>
+					<td><c:out value = "${user.userAddress1}"/></td>
+					<td><c:out value = "${user.userAge}"/></td>
+					<td><c:out value = "${user.userGender}"/></td>
+					<td><c:out value =  "${user.userPhonenumber}"/></td>
+					<td><c:out value = "${user.userEmail}"/></td>
+				</tr>
 		
 		`
 	});
 
-	if (users.length == 0) {
-		text += `
-			<li>
-		        <div>
-					현재 게시글이 없습니다. 게시글 작성을 해보세요!
-				</div>
-			</li>
-		`
-	}
+
 	$tr.append(text);
 }
 

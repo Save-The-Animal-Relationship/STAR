@@ -10,30 +10,77 @@
 <body>
 	<div class="layer_fix layer_unfix pop_login pop_mem_reserve new-style-form">
 	    <section>
-	        <form id="loginForm" action="https://www.goodchoice.kr/user/passwdResetEmailCheck" autocomplete="off" method="post" novalidate="novalidate">
+	        <form id="loginForm" action="https://www.goodchoice.kr/user/passwdResetNewProcess" autocomplete="off" method="post" novalidate="novalidate">
 	            <input type="hidden" name="returnUrl" value="">
-	            <input type="hidden" name="yeogi_token" value="2cf8e68f8bdb03b31adc6651f9b9751c">
+	            <input type="hidden" name="yeogi_token" value="a92d03737df39a50b22a2dcec4c64c41">
 	
-	            <strong class="sub_title">비밀번호 재설정</strong>
+	            <strong class="sub_title">새 비밀번호 설정</strong>
+	
 	            <p class="txt_top">
-	                회원가입 시 등록한 이메일 주소를 입력해 주세요.
+	                인증이 완료되었습니다.<br>
+	                새로운 비밀번호를 입력해주세요.
 	            </p>
 	
-	            <div class="pop_login_errors">
-	                <ul>
-	                                    </ul>
-	            </div>
+				<div class="inp_type_1 ico_pw form-errors form-password-rule input-pw-div">
+					<input type="password" name="passwd" placeholder="새 비밀번호" id="new_pw">
+					<label id="new_pw_msg" class="validate_msg_label"></label>
+				<button type="button" class="reset_val">초기화</button>
+				</div>
+				
+				<div class="inp_type_1 ico_pw form-errors">
+					<input type="password" name="confirm_passwd" id="new_pw_re" placeholder="새 비밀번호 확인">
+					<label id="new_pw_re_msg" class="validate_msg_label"></label>
+				<button type="button" class="reset_val">초기화</button>
+				</div>
 	
-	            <div class="inp_type_1 ico_email form-errors"><!-- focus / err -->
-	                <input type="email" name="uid" placeholder="이메일 주소" required="" class="required" value="" data-msg-required="이메일 주소를 확인해 주세요.">
-	            <button type="button" class="reset_val">초기화</button>
-	            </div>
-	
-	            <button type="submit" data-js-validate-email="" class="btn_link gra_left_right_red" disabled="">
-	            	<span>확인</span>
-	            </button>
+				<button type="button" onclick="changePwSubmit();" class="btn_link gra_left_right_red btn_user_submit" disabled="" style="background-color: rgb(250, 250, 250); color: rgba(0, 0, 0, 0.16); border: none;">
+					<span>비밀번호 변경</span>
+				</button>
 	        </form>
 	    </section>
 	</div>
 </body>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+
+    $("#new_pw").blur(function(){
+
+        var pass = $("#new_pw").val();
+    var passcheck = $("#new_pw_re").val();
+
+ if(passcheck == pass){
+    $("#new_pw_re_msg").css('color','blue');
+    $("#new_pw_re_msg").text('비밀번호가 일치합니다.');
+ }
+
+ else if(passcheck != pass){
+    $("#new_pw_re_msg").css('color','red');
+    $("#new_pw_re_msg").text('비밀번호가 일치하지 않습니다.');
+    return false;
+ }
+
+    });
+
+    $("#new_pw_re").blur(function(){
+    
+    var pass = $("#new_pw").val();
+    var passcheck = $("#new_pw_re").val();
+
+ if(passcheck == pass){
+    $("#new_pw_re_msg").css('color','blue');
+    $("#new_pw_re_msg").text('비밀번호가 일치합니다.');
+ }
+
+ else if(passcheck != pass){
+    $("#new_pw_re_msg").css('color','red');
+    $("#new_pw_re_msg").text('비밀번호가 일치하지 않습니다.');
+    return false;
+ }
+ 
+    });
+});
+</script>
 </html>

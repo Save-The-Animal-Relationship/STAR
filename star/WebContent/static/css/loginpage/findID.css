@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-* {
+ * {
     outline: 0;
 }
 
@@ -84,7 +84,7 @@ button span {
 }
 
 .new-style-form .inp_type_1 {
-    margin-bottom: 16px;
+    margin-bottom: 33px;
     height: 48px;
     padding: 0 16px 0 46px;
     position: relative;
@@ -149,4 +149,11 @@ button span {
     border-radius: 6px;
     text-align: center;
     border: none;
+}
+
+.validate_msg_label {
+    margin-top: 23px;
+    display: inline-block;
+    font-size: 13px;
+    color: red;
 }

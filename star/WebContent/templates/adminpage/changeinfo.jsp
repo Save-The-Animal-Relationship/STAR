@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,14 +58,14 @@
 				</tr>
 				<tr>
 					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td>${user.userNumber}</td>
-					<td>${user.userName}</td>
-					<td>${user.userId}</td>
-					<td>${user.userAddress1}</td>
-					<td>${user.userAge}</td>
-					<td>${user.userGender}</td>
-					<td>${user.userPhonenumber}</td>
-					<td>${user.userEmail}</td>
+					<td><c:out value = "${user.userNumber}"/></td>
+					<td><c:out value = "${user.userName}"/></td>
+					<td><c:out value = "${user.userId}"/></td>
+					<td><c:out value = "${user.userAddress1}"/></td>
+					<td><c:out value = "${user.userAge}"/></td>
+					<td><c:out value = "${user.userGender}"/></td>
+					<td><c:out value =  "${user.userPhonenumber}"/></td>
+					<td><c:out value = "${user.userEmail}"/></td>
 				</tr>
 				</table>
 				

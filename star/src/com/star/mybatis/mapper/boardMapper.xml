@@ -28,6 +28,9 @@
 		on m.member_id = b.member_id
 	</select>
 </mapper> -->
+<mapper namespace="board">
+	
+</mapper>
 
 
 
