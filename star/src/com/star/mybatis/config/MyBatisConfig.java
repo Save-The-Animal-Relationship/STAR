@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MyBatisConfig {
 	private static SqlSessionFactory sqlSessionFactory;
-	
+
 	static {
 		String resource = "com/star/mybatis/config/config.xml";
 		try {
@@ -19,7 +19,7 @@ public class MyBatisConfig {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static SqlSessionFactory getSqlSessionFactory() {
 		return sqlSessionFactory;
 	}

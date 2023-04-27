@@ -1,6 +1,6 @@
 package com.star.user.domain;
 
-public class UserVO {
+public class UserAdminVO {
 	private Long userNumber;
 	private String userId;
 	private String userPassword;
@@ -17,7 +17,7 @@ public class UserVO {
 	private String userContent;
 	private int userStar;
 	
-	public UserVO() {;}
+	public UserAdminVO() {;}
 
 	public final Long getUserNumber() {
 		return userNumber;
@@ -164,7 +164,7 @@ public class UserVO {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		UserVO other = (UserVO) obj;
+		UserAdminVO other = (UserAdminVO) obj;
 		if (userNumber == null) {
 			if (other.userNumber != null)
 				return false;

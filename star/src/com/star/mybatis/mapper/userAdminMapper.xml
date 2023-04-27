@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="user">
+<!--전체 조회-->
+	<select id="select" resultType="userAdminVO">
+		select user_number ,user_id,user_name,user_address,user_phonenumber,user_age,user_gender,user_email 
+		from tbl_user 
+		where user_id = #{userId}
+	</select>
+	
+<!--회원삭제 -->
+	<delete id="delete">
+		delete from tbl_user
+		where user_id = #{userId}
+	</delete>
+</mapper>

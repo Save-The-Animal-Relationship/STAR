@@ -10,4 +10,7 @@ public SqlSession sqlSession;
 	public AnswerDAO() {
 		sqlSession = MyBatisConfig.getSqlSessionFactory().openSession(true);
 	}
+	
+
+
 }

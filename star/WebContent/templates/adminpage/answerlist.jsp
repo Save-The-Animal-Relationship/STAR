@@ -5,7 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>문의글 목록</title>
-<link rel="stylesheet" href="../../static/css/adminpage/adminconstructor.css">
+<link rel="stylesheet"
+	href="../../static/css/adminpage/adminconstructor.css">
 <link rel="stylesheet" href="../../static/css/adminpage/answerlist.css">
 </head>
 <body>
@@ -28,7 +29,7 @@
 		</nav>
 		<section class="mainadminpage">
 			<form class="big-box">
-				<p>문의글 답변</p>	
+				<p>문의글 답변</p>
 				<div class="search-box">
 					<select>
 						<option value="title">제목</option>
@@ -41,249 +42,59 @@
 					<input type="button" class="delete" name="delete" value="삭제하기" />
 				</div>
 				<div class="content">
-				<table >
-				<tr>
-					<th><input type="checkbox" name="delete-report" class="all"/></th>
-					<th>문의글 번호</th>
-					<th>문의자 이름</th>
-					<th>문의자 ID</th>
-					<th>문의 내용</th>
-					<th>작성 시간</th>
-					<th>답변상황</th>
-				</tr>
-				<tr onClick="location.href='see-answer-details.jsp'">
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td>1</td>
-					<td>김진</td>
-					<td>q1w2e3r4</td>
-					<td>로그아웃 버튼이	안눌려요!</td>
-					<td>2023/04/19</td>
-					<td>미답</td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				<tr>
-					<td><input type="checkbox" name="delete-report" class="term"/></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
-				
-				
-				
-				
-				
-				
-				</table>
-			<p class="pages"> < 1 2 3 4 > </p>
-				
-			</div>
+					<table>
+						<tr>
+							<th><input type="checkbox" name="delete-report" class="all" /></th>
+							<th>문의글 번호</th>
+							<th>문의자 이름</th>
+							<th>문의자 ID</th>
+							<th>문의 내용</th>
+							<th>작성 시간</th>
+							<th>답변상황</th>
+						</tr>
+						<tr onClick="location.href='see-answer-details.jsp'">
+							<td><input type="checkbox" name="delete-report" class="term" /></td>
+							<td>${answer.answerNumber}</td>
+							<td>${user.userName}</td>
+							<td>${user.userId}</td>
+							<td></td>
+							<td>${bord.boardDate}</td>
+							<td>미답</td>
+						</tr>
+					</table>
+					<p class="pages">< 1 2 3 4 ></p>
+
+				</div>
 			</form>
 		</section>
 	</main>
 </body>
 
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script
+	src="https://rawgit.com/jackmoore/autosize/master/dist/autosize.min.js"></script>
+<script
+	src="${pageContext.request.contextPath}/static/js/admin/admin.js"></script>
+
+
 <script>
-const $all = $(".all");
-const $checkboxes = $(".term");
-$all.on("click", function(){
-    $checkboxes.prop("checked", $(this).is(":checked"));
-});
+	const $all = $(".all");
+	const $checkboxes = $(".term");
+	$all.on("click", function() {
+		$checkboxes.prop("checked", $(this).is(":checked"));
+	});
 
-// 체크 박스 중 한 개라도 false일 경우 전체동의 해제(filter사용)
+	// 체크 박스 중 한 개라도 false일 경우 전체동의 해제(filter사용)
 
-$checkboxes.on("click", function(){
-    $all.prop("checked", $checkboxes.filter(":checked").length == 10);
-});
+	$checkboxes.on("click", function() {
+		$all.prop("checked", $checkboxes.filter(":checked").length == 10);
+	});
 
-
-$checkboxes.each(function(i, checkbox){
-    if(!($(checkbox).is(":checked"))){
-        $all.prop("checked", false);
-    }
-});
-</script> 
+	$checkboxes.each(function(i, checkbox) {
+		if (!($(checkbox).is(":checked"))) {
+			$all.prop("checked", false);
+		}
+	});
+</script>
 </html>

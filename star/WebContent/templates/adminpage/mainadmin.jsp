@@ -7,6 +7,7 @@
 <title>관리자 페이지</title>
 <link rel="stylesheet" href="../../static/css/adminpage/adminconstructor.css">
 <link rel="stylesheet" href="../../static/css/adminpage/mainadmin.css">
+
 </head>
 <body>
 	<main>

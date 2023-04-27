@@ -1,4 +1,4 @@
-package com.star.answer;
+package com.star.user;
 
 import java.io.IOException;
 
@@ -8,18 +8,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.star.Result;
+import com.star.user.controller.SelectAllController;
 
-public class AnswerFrontController extends HttpServlet {
+public class UserAdminFrontController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
 
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
-		Result result = null;
-
+		Result result = new Result();
+		
+		if (target.equals("select")) {
+			result = new SelectAllController().execute(req, resp);
+		}else if (target.equals("delete")) {
+			result = new SelectAllController().execute(req, resp);
+		}
 
 		if (result != null) {
 			if (result.isRedirect()) {
+				System.out.println("들어옴");
 				resp.sendRedirect(result.getPath());
 			} else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);
@@ -31,4 +38,5 @@ public class AnswerFrontController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		doGet(req, resp);
 	}
+
 }
