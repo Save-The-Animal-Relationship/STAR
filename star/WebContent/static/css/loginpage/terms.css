@@ -39,7 +39,6 @@ a, input, button, div, li, textarea, form, label, select {
 }
 
 textarea, button, input, select {
-    -webkit-appearance: none;
     border-radius: 0;
     font-family: 'Pretendard', 'Apple SD Gothic Neo', '맑은 고딕', '맑은고딕', 'Malgun Gothic', sans-serif;
 }
@@ -122,15 +121,6 @@ label {
     vertical-align: top;
 }
 
-input[type=checkbox].inp_chk_02 {
-    width: 24px;
-    height: 24px;
-    border: none;
-    background: url(https://image.goodchoice.kr/images/web_v3/ico_chk.png) 0 0 no-repeat;
-    background-size: 24px auto;
-    cursor: pointer;
-}
-
 input[type=checkbox].inp_chk_02:checked {
     background: url(https://image.goodchoice.kr/images/web_v3/ico_chk.png) 0 -24px no-repeat;
     background-size: 24px auto;
@@ -157,12 +147,20 @@ input[type=checkbox].inp_chk_02:checked {
     color: #fff;
     text-align: center;
     border: none;
+    background-color: #fafafa;
 }
 
 button span {
     position: relative;
 }
 
-.gra_left_right_red {
-    background: linear-gradient(to right, rgba(255,0,85,1) 1%,rgba(230,34,67,1) 100%);
+
+input[type=checkbox].inp_chk_02 {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: url("https://image.goodchoice.kr/images/web_v3/ico_chk.png") 0 0 no-repeat;
+    background-size: 24px auto;
+    cursor: pointer;
 }
+

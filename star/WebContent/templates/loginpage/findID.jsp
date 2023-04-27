@@ -26,7 +26,8 @@
 	
 	            <div class="inp_type_1 ico_email form-errors">
 	            <!-- focus / err -->
-	                <input type="email" name="uid" placeholder="이메일 주소" required="" class="required" value="" data-msg-required="이메일 주소를 확인해 주세요.">
+	                <input type="email" name="uid" id="gcuseremail" placeholder="이메일 주소" required="" class="required" value="" data-msg-required="이메일 주소를 확인해 주세요.">
+						<label id="gcuseremail_msg" class="validate_msg_label" style="color: red;"></label>
 	            <button type="button" class="reset_val">초기화</button>
 	            </div>
 	
@@ -37,4 +38,35 @@
 	    </section>
 	</div>
 </body>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+
+$(document).ready(function() {
+
+var youhyo =/([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/ ;
+
+ $("#gcuseremail").blur(function(){
+
+    var email = $("#gcuseremail").val();
+
+    if( email == '' || email == 'undefined') {
+        $("#gcuseremail_msg").css('color','red');
+        $("#gcuseremail_msg").text('이메일을 입력해 주세요');  
+        return false;
+}
+    else if(! youhyo.test(email)  ) {
+        $("#gcuseremail_msg").css('color','red');
+        $("#gcuseremail_msg").text('사용할 수 없는 이메일 입니다.');
+        return false;
+    }
+    else if( youhyo.test(email)  ) {
+        $("#gcuseremail_msg").css('color','blue');
+        $("#gcuseremail_msg").text('사용할 수 있는 이메일 입니다.');
+       
+    }
+    
+});
+
+});
+</script>
 </html>

@@ -152,3 +152,6 @@ button {
     line-height: 48px;
     color: #ff0055;
 }
+.phone_confirm section .btn_confirm.active {
+    background: #ff0055;
+}
