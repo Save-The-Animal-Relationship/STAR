@@ -443,25 +443,7 @@
 				</div>
 
 
-<<<<<<< HEAD
 				<div style="display: flex; flex-wrap: wrap; width: 930px; margin-top: 65px; justify-content: space-between; align-items: center">
-=======
-<footer>
-    <div class="align">
-        <ul class="link">
-            <li><a href="" style="text-decoration: none;">서비스문의</a></li>
-        </ul>
-        <p><b>고객행복센터 1577-5790</b><span>오전 9시 - 새벽 3시</span></p>
-        <address>
-            <span>(주) STAR</span>
-                            주소 : 서울 강남구 테헤란로 142 아크플레이스 3층 | 대표이사 김보령 | 사업자등록번호: 733-16-003124 | 전자우편주소 : star@gmail.com<br>
-            통신판매번호 : 2017-서울강남-01779 | 관광사업자 등록번호: 제1026-24호 | 전화번호 : 1670-6250 | 호스팅서비스제공자의 상호 표시: (주)STAR컴퍼니<br>
-            <span class="order">(주)STAR컴퍼니는 통신판매중개자로서 통신판매의 당사자가 아니며, 상품의 예약, 이용 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.</span><br>
-            Copyright GC COMPANY Corp. All rights reserved.
-        </address>
-    </div>
-</footer>
->>>>>>> mybranch
 
 
 

@@ -1,11 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
-
+<<<<<<< HEAD
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mypage/petsitterform.css">
+=======
+<link rel="stylesheet" href="../../static/css/mypage/petsitterform.css">
+>>>>>>> ebd3b5f64560de68450c6739a38ec4aa5d68fa82
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
 <meta charset="UTF-8">
@@ -42,10 +44,10 @@
 			<nav>
 				<ul>
 					<li>
-						<a  href="javascript:location.href='${pageContext.request.contextPath}/myInfo.user'">내 정보 관리</a>
+						<a  href="info.jsp">내 정보 관리</a>
 					</li>
 					<li>
-						<a class="mypageatag" href="javascript:location.href='${pageContext.request.contextPath}/petsitterform.user'">돌보미 신청</a>
+						<a class="mypageatag" href="petsitterform.jsp">돌보미 신청</a>
 					</li>
 					<li>
 						<a href="carelist.jsp">돌봄 내역</a>
@@ -67,25 +69,24 @@
 						<span class="tab_btn">돌보미 신청서 작성</span>
 					</div>
 					<div class="tab_each" style="display: block;">
-						<form name="joinpetsitter" action="${pageContext.request.contextPath}/petsitterformOk.user">
+						<form name="joinpetsitter" action="get">
 							<section class="info_wrap">
 								<div class="title_block">
 									<b>제목</b>
 									<p class="inp_wrap">
-										<input class="js-email-string" type="text" placeholder="제목을 입력해주세요." name="userTitle" value="${user.userTitle}" >
+										<input class="js-email-string" type="text" placeholder="제목을 입력해주세요." >
 										<input type="text" class="js-email-string" style="display:none;">
 									</p>
 								</div>
 							</section>
 							<section class="text_wrap">
-								<b>내용<c:out value="${user.userContent}"/></b>
+								<b>내용</b>
 								<div>
-									<textarea rows="" cols="" placeholder="돌보미가 됨에 있어 책임감을 가지고 신청해주세요." name="userContent"><c:out value="${user.userContent}"/></textarea>
+									<textarea rows="" cols="" placeholder="돌보미가 됨에 있어 책임감을 가지고 신청해주세요."></textarea>
 								</div> 
 							</section>
 							<section class="btn_wrap">
-								<input type="hidden" value="${user.userNumber}">
-								<button class="btn_red_fill" type="submit">작성 완료</button>
+								<button class="btn_red_fill" type="button">작성 완료</button>
 							</section>
 						</form>
 					</div>
@@ -94,7 +95,9 @@
 		</div>
 	</div>
 </body>
-
+<<<<<<< HEAD
 <script src="${pageContext.request.contextPath}/static/js/mypage/header.js"></script>
-
+=======
+<script src="../../static/js/mypage/header.js"></script>
+>>>>>>> ebd3b5f64560de68450c6739a38ec4aa5d68fa82
 </html>

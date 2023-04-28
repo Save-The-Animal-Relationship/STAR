@@ -5,10 +5,13 @@
 <head>
 <meta charset="UTF-8">
 <title>관리자 페이지</title>
-
+<<<<<<< HEAD
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/adminconstructor.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/mainadmin.css">
-
+=======
+<link rel="stylesheet" href="../../static/css/adminpage/adminconstructor.css">
+<link rel="stylesheet" href="../../static/css/adminpage/mainadmin.css">
+>>>>>>> ebd3b5f64560de68450c6739a38ec4aa5d68fa82
 </head>
 <body>
 	<main>
