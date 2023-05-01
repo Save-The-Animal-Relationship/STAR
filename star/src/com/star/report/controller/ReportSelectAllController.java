@@ -13,8 +13,9 @@ import org.json.JSONObject;
 import com.star.Action;
 import com.star.Result;
 import com.star.report.dao.ReportDAO;
-import com.star.report.domain.Criteria;
 import com.star.report.domain.Search;
+import com.star.user.domain.Criteria;
+
 
 public class ReportSelectAllController implements Action {
 	@Override
@@ -32,6 +33,7 @@ public class ReportSelectAllController implements Action {
 		
 		Search search = new Search(type, keyword);
 		Criteria criteria = new Criteria(page, reportDAO.getTotal(search), sort);
+		
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());

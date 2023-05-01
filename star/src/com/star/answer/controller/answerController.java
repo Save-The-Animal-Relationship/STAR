@@ -16,6 +16,7 @@ import com.star.answer.dao.AnswerDAO;
 import com.star.answer.domain.Criteria;
 import com.star.answer.domain.Search;
 
+
 public class answerController implements Action{
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
