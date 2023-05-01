@@ -8,7 +8,6 @@ public class Search {
 		this.type = type;
 		this.keyword = keyword;
 	}
-<<<<<<< HEAD
 
 	public String getType() {
 		return type;
@@ -29,25 +28,5 @@ public class Search {
 	public String[] getTypes(){
 		return type == null ? new String[] {} : type.split("&");
 	}
-=======
 	
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
-	}
-	public String getKeyword() {
-		return keyword;
-	}
-	public void setKeyword(String keyword) {
-		this.keyword = keyword;
-	}
-	
-	public String[] getTypes(){
-		return type == null ? new String[] {} : type.split("&");
-	}
-	
-	
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 }

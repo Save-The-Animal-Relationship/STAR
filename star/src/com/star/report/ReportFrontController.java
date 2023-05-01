@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.star.Result;
-
 import com.star.report.controller.ReportDeleteOkController;
 import com.star.report.controller.ReportDetailAdminOkController;
 import com.star.report.controller.ReportLoadOkController;
@@ -28,20 +27,15 @@ public class ReportFrontController extends HttpServlet{
             result = new ReportLoadOkController().execute(req, resp);
          }else if(target.equals("reportDeleteOk")) {
             result= new ReportDeleteOkController().execute(req, resp);
-<<<<<<< HEAD
          }else if (target.equals("select")) {
  			result = new ReportSelectAllController().execute(req, resp);
  		} else if (target.equals("delete")) {
  			result = new ReportSelectAllController().execute(req, resp);
- 		}
-=======
-         }else if(target.equals("reportDetailAdmin")){
+ 		} else if(target.equals("reportDetailAdmin")){
         	 result = new ReportDetailAdminOkController().execute(req, resp);
         	 System.out.println("프컨 처음들어옴");
          }
          
-         
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
          
          if (result != null) {
             if (result.isRedirect()) {

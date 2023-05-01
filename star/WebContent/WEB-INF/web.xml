@@ -10,7 +10,7 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   
-  <!-- <servlet>
+ <servlet>
   	<servlet-name>Board</servlet-name>
   	<servlet-class>com.star.board.BoardFrontController</servlet-class>
   </servlet>
@@ -46,23 +46,12 @@
   	<servlet-class>com.star.pet.PetFrontController</servlet-class>
   </servlet>
 
-   <servlet-mapping>
-  	<servlet-name>Quest</servlet-name>
-  	<url-pattern>*.Quest</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>Quest</servlet-name>
-  	<servlet-class>com.star.Quest.QuestFrontController</servlet-class>
-  </servlet>
-  
-  -->
-
     <servlet-mapping>
      <servlet-name>Review</servlet-name>
      <url-pattern>*.review</url-pattern>
   </servlet-mapping>
-  <servlet>
   
+  <servlet>
      <servlet-name>Review</servlet-name>
      <servlet-class>com.star.review.ReviewFrontController</servlet-class>
   </servlet>
@@ -71,8 +60,8 @@
      <servlet-name>Report</servlet-name>
      <url-pattern>*.report</url-pattern>
   </servlet-mapping>
-  <servlet>
   
+  <servlet>
      <servlet-name>Report</servlet-name>
      <servlet-class>com.star.report.ReportFrontController</servlet-class>
   </servlet>
@@ -96,7 +85,6 @@
   	<servlet-name>User</servlet-name>
   	<servlet-class>com.star.user.UserFrontController</servlet-class>
   </servlet>
-<<<<<<< HEAD
    
 
    <servlet>
@@ -108,19 +96,6 @@
   	<servlet-name>Admin</servlet-name>
   	<url-pattern>*.admin</url-pattern>
   </servlet-mapping>
-  
-   <servlet-mapping>
-  	<servlet-name>Answer</servlet-name>
-  	<url-pattern>*.answer</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>Answer</servlet-name>
-  	<servlet-class>com.star.answer.AnswerFrontController</servlet-class>
-  </servlet>
-=======
-  
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
-
   
   
 </web-app>

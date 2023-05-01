@@ -8,28 +8,18 @@
 	</settings>
 	
 	<typeAliases>
-<<<<<<< HEAD
-
 		<typeAlias type="com.star.board.domain.BoardVO" alias="boardVO"/>
-=======
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 		<typeAlias type="com.star.answer.domain.AnswerVO" alias="answerVO"/>
 		<typeAlias type="com.star.pet.domain.PetVO" alias="petVO"/>
 		<typeAlias type="com.star.quest.domain.QuestVO" alias="questVO"/>
 		<typeAlias type="com.star.review.domain.ReviewVO" alias="reviewVO"/>
 		<typeAlias type="com.star.use.domain.UseVO" alias="useVO"/>
 		<typeAlias type="com.star.user.domain.UserVO" alias="UserVO"/>
-<<<<<<< HEAD
 		<typeAlias type="com.star.use.domain.UseDTO" alias="useDTO"/>
 	    <typeAlias type="com.star.review.domain.ReviewDTO" alias="reviewDTO"/>
     	<typeAlias type="com.star.report.domain.ReportDTO" alias="reportDTO"/>
 		<typeAlias type="com.star.answer.domain.AnswerDTO" alias="answerDTO"/>
 		<typeAlias type="com.star.board.domain.BoardDTO" alias="boardDTO"/>
-
-=======
-   	 	<typeAlias type="com.star.review.domain.ReviewDTO" alias="reviewDTO"/>
-    	<typeAlias type="com.star.report.domain.ReportDTO" alias="reportDTO"/>
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	</typeAliases>
 
 	<environments default="mysql">
@@ -44,7 +34,6 @@
 		</environment>
 	</environments>
 	<mappers>
-<<<<<<< HEAD
 		<mapper resource="com/star/mybatis/mapper/userAdminMapper.xml"/>
  		<mapper resource="com/star/mybatis/mapper/boardMapper.xml"/>
  		<mapper resource="com/star/mybatis/mapper/reportMapper.xml"/>
@@ -54,13 +43,7 @@
 		<mapper resource="com/star/mybatis/mapper/fileMapper.xml"/>
 		<mapper resource="com/star/mybatis/mapper/questMapper.xml"/>
 		<mapper resource="com/star/mybatis/mapper/reviewMapper.xml"/>
-
-=======
 		<mapper resource="com/star/mybatis/mapper/userMapper.xml"/>
- 		<mapper resource="com/star/mybatis/mapper/useMapper.xml"/>
- 		<mapper resource="com/star/mybatis/mapper/reportMapper.xml"/>
-   	    <mapper resource="com/star/mybatis/mapper/reviewMapper.xml"/>
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	</mappers>
 </configuration>
 

@@ -17,10 +17,6 @@ public class UserVO {
 
 	public UserVO() {;}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	public Long getUserNumber() {
 		return userNumber;
 	}
@@ -100,10 +96,6 @@ public class UserVO {
 		this.userGender = userGender;
 	}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	public String getUserStatus() {
 		return userStatus;
 	}
@@ -153,11 +145,6 @@ public class UserVO {
 	}
 
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -166,10 +153,6 @@ public class UserVO {
 		return result;
 	}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -185,26 +168,8 @@ public class UserVO {
 		} else if (!userNumber.equals(other.userNumber))
 			return false;
 		return true;
-<<<<<<< HEAD
-
-
-
-=======
 	}
-	
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 	
 	
 }
 	
-<<<<<<< HEAD
-	
-=======
-
-
-
-	
-	
-
-
->>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
