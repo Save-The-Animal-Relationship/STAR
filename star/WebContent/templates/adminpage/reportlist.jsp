@@ -9,12 +9,16 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/adminconstructor.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/reportlist.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/font.css">
+<<<<<<< HEAD
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/adminconstructor.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/reportlist.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/font.css">
 <link rel="stylesheet" href="../../static/css/adminpage/adminconstructor.css">
 <link rel="stylesheet" href="../../static/css/adminpage/reportlist.css">
 <link rel="stylesheet" href="../../static/css/adminpage/font.css">
+=======
+
+>>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 </head>
 <body>
 	<main>

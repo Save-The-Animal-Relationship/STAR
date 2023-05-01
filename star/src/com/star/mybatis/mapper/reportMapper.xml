@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="report">
+<<<<<<< HEAD
 <!--신고목록 전체 조회-->	
 	<select id="select" resultType="ReportDTO">
 		select report_id, user_name, user_id, report_content, use_useddate, use_status	
@@ -16,6 +17,8 @@
 	</select>  
 
 
+=======
+>>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
    <!-- 전체목록 -->
    <select id="selectAll" resultType="reportDTO">
       select
@@ -49,7 +52,21 @@
    <delete id="delete">
       delete from tbl_report where report_id = #{reportId}
    </delete>
+<<<<<<< HEAD
 
+=======
+	<select id="selectReport">
+		select report_id, use_number, user_name, report_title, 
+	</select>
+	
+	<select id="selectReportDetailAdmin" resultType="reportDTO">
+		select report_id, s.use_number, user_name, report_title, user_id, report_content
+		from tbl_user u left join tbl_report r
+		on u.user_number = r.user_number join tbl_use s on u.user_number = s.use_number 
+		and report_id = ${reportId}
+	</select>
+	
+>>>>>>> 77134d37a2caee0ac37f9ef22c5064b1dcef3a4a
 </mapper>
 	
 
