@@ -26,7 +26,6 @@ public class UserAdminFrontController extends HttpServlet {
 
 		if (result != null) {
 			if (result.isRedirect()) {
-//				System.out.println("들어옴");
 				resp.sendRedirect(result.getPath());
 			} else {
 				req.getRequestDispatcher(result.getPath()).forward(req, resp);

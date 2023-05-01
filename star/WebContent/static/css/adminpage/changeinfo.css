@@ -54,6 +54,16 @@ section form div #search{
 	position:absolute;
 	top:105px;
 }
+	
+.content-wrap{    
+	position: absolute;
+	margin: 10px 0;
+	width: 100%;
+	height: 100%;
+	position:absolute;
+	top:105px;
+}
+
 table{
 	background-color:white;
 	width:100%;	
@@ -76,4 +86,30 @@ p.pages{
 	font-size:20px;
 	text-align:center;
 	letter-spacing:1rem;
+}
+div#paging-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    text-align: center;
+}
+section#content-wrap a {
+    display: flex;
+}
+a.paging-checked {
+    color: rgb(235 124 120);
+    background: rgba(235, 124, 120, 0.1);
+    font-weight: 700;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+a.paging {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+}
+a {
+    text-decoration: none;
 }

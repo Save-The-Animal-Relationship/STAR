@@ -1,4 +1,4 @@
-package com.star.answer.controller;
+package com.star.report.controller;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -12,14 +12,14 @@ import org.json.JSONObject;
 
 import com.star.Action;
 import com.star.Result;
-import com.star.answer.dao.AnswerDAO;
+import com.star.report.dao.ReportDAO;
 import com.star.user.domain.Criteria;
 import com.star.user.domain.Search;
 
-public class answerController implements Action{
+public class ReportSelectAllController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		AnswerDAO answerDAO = new AnswerDAO();
+		ReportDAO reportDAO = new ReportDAO();
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
 		String temp = req.getParameter("page");
@@ -31,7 +31,7 @@ public class answerController implements Action{
 		sort = sort == null ? "recent" : sort; 
 		
 		Search search = new Search(type, keyword);
-		Criteria criteria = new Criteria(page, answerDAO.getTotal(search), sort);
+		Criteria criteria = new Criteria(page, reportDAO.getTotal(search), sort);
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());
@@ -41,9 +41,9 @@ public class answerController implements Action{
 		
 		
 		
-		answerDAO.select(pagable).stream().map(answer -> new JSONObject(answer)).forEach(jsonArray::put);
-		req.setAttribute("answer", jsonArray.toString());
-		req.setAttribute("total", answerDAO.getTotal(search));
+		reportDAO.select(pagable).stream().map(report -> new JSONObject(report)).forEach(jsonArray::put);
+		req.setAttribute("report", jsonArray.toString());
+		req.setAttribute("total", reportDAO.getTotal(search));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", criteria.getStartPage());
 		req.setAttribute("endPage", criteria.getEndPage());
@@ -52,7 +52,8 @@ public class answerController implements Action{
 		req.setAttribute("sort", sort);
 		req.setAttribute("type", type);
 		req.setAttribute("keyword", keyword);
-		result.setPath("templates/adminpage/answerlist.jsp");
+		
+		result.setPath("templates/adminpage/reportlist.jsp");
 		return result;
 	}
 
