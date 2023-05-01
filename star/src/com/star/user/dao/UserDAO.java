@@ -45,8 +45,6 @@ public class UserDAO {
 		return sqlSession.selectList("user.selectCurrentSitters");
 	}
 	
-
-
 	//이름바꾸기
 	public void updateName(String userName, Long userNumber) {
 		HashMap<String, Object> updateMap = new HashMap<String, Object>();
@@ -98,7 +96,6 @@ public class UserDAO {
 		updateMap.put("userNumber", userNumber);
 		sqlSession.update("user.petSitterFormOk",updateMap);
 	}
-	
-		
+
 
 }

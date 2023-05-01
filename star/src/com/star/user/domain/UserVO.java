@@ -90,7 +90,17 @@ public class UserVO {
 	public void setUserStar(int userStar) {
 		this.userStar = userStar;
 	}
+
+
  
+
+	@Override
+	public String toString() {
+		return "UserVO [userNumber=" + userNumber + ", userId=" + userId + ", userPassword=" + userPassword
+				+ ", userName=" + userName + ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber
+				+ ", userAge=" + userAge + ", userGender=" + userGender + ", userStatus=" + userStatus + ", userTitle="
+				+ userTitle + ", userContent=" + userContent + ", userStar=" + userStar + "]";
+	}
 
 
 
@@ -116,18 +126,16 @@ public class UserVO {
 		} else if (!userNumber.equals(other.userNumber))
 			return false;
 		return true;
-	}
 
-	@Override
-	public String toString() {
-		return "UserVO [userNumber=" + userNumber + ", userId=" + userId + ", userPassword=" + userPassword
-				+ ", userName=" + userName + ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber
-				+ ", userAge=" + userAge + ", userGender=" + userGender + ", userStatus=" + userStatus + ", userTitle="
-				+ userTitle + ", userContent=" + userContent + ", userStar=" + userStar + "]";
-	}
 	
+
+
 	
-	
-	
+
+	}	
+
 	
 }
+	
+	
+	

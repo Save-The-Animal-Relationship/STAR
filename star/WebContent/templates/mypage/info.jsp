@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mypage/info.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 <meta charset="UTF-8">
@@ -183,7 +184,9 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/mypage/onclick.js"></script>
-<script src="../../static/js/mypage/input.js"></script>
-<script src="../../static/js/mypage/header.js"></script>
+
+<script src="${pageContext.request.contextPath}/static/js/mypage/onclick.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mypage/input.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/mypage/header.js"></script>
+
 </html>

@@ -1,6 +1,7 @@
 package com.star.review.domain;
 
 public class ReviewDTO {
+
    private Long reviewNumber;
    private String reviewComment;
    private String reviewDate;

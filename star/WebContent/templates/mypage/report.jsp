@@ -5,11 +5,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="../../static/css/mypage/joinout.css">
-<link rel="stylesheet" href="../../static/css/mypage/report.css">
-<link rel="stylesheet" href="../../static/css/modal.css">
-<link rel="stylesheet" type="text/css"
-   href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mypage/joinout.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mypage/report.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/modal.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 <title>신고목록</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
             <div>
                <img
                   style="width: 150px; height: 150px; margin-left: -90px; margin-top: -33px;"
-                  src="../../static/image/3.png">
+                  src="${pageContext.request.contextPath}/static/image/3.png">
             </div>
             <h1>
                <a href="" id="bannertext">Save The Animal Relationship</a>
@@ -74,7 +74,8 @@
    </div>
 
 </body>
-<script src="../../static/js/mypage/header.js"></script>
+
+<script src="${pageContext.request.contextPath}/static/js/mypage/header.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script> let contextPath = "${pageContext.request.contextPath}" </script>
 <script src="../../static/js/modal/modal.js"></script>

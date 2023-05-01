@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/mypage/petsitterform.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
 
@@ -93,5 +94,7 @@
 		</div>
 	</div>
 </body>
-<script src="../../static/js/mypage/header.js"></script>
+
+<script src="${pageContext.request.contextPath}/static/js/mypage/header.js"></script>
+
 </html>
