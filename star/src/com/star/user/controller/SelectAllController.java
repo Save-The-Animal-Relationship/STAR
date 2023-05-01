@@ -12,7 +12,7 @@ import org.json.JSONObject;
 
 import com.star.Action;
 import com.star.Result;
-import com.star.user.dao.UserAdminDAO;
+import com.star.user.dao.UserDAO;
 import com.star.user.domain.Criteria;
 import com.star.user.domain.Search;
 
@@ -20,7 +20,7 @@ public class SelectAllController implements Action {
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 
-		UserAdminDAO userAdminDAO = new UserAdminDAO(); 
+		UserDAO userDAO = new UserDAO(); 
 		Result result = new Result();
 		JSONArray jsonArray = new JSONArray();
 		String temp = req.getParameter("page");
@@ -32,7 +32,7 @@ public class SelectAllController implements Action {
 		sort = sort == null ? "recent" : sort; 
 		
 		Search search = new Search(type, keyword);
-		Criteria criteria = new Criteria(page, userAdminDAO.getTotal(search), sort);
+		Criteria criteria = new Criteria(page, userDAO.getTotal(search), sort);
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		pagable.put("types", search.getTypes());
 		pagable.put("keyword", search.getKeyword());
@@ -42,9 +42,9 @@ public class SelectAllController implements Action {
 		
 		
 		
-		userAdminDAO.select(pagable).stream().map(user -> new JSONObject(user)).forEach(jsonArray::put);
+		userDAO.select(pagable).stream().map(user -> new JSONObject(user)).forEach(jsonArray::put);
 		req.setAttribute("users", jsonArray.toString());
-		req.setAttribute("total", userAdminDAO.getTotal(search));
+		req.setAttribute("total", userDAO.getTotal(search));
 		req.setAttribute("page", page);
 		req.setAttribute("startPage", criteria.getStartPage());
 		req.setAttribute("endPage", criteria.getEndPage());

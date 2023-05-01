@@ -79,6 +79,16 @@ public class Criteria {
 	public void setNext(boolean next) {
 		this.next = next;
 	}
+
+	public String getSort() {
+		return sort;
+	}
+
+	public void setSort(String sort) {
+		this.sort = sort;
+	}
+	
+	
 }
 
 

@@ -51,8 +51,7 @@
 
    <servlet>
   	<servlet-name>Admin</servlet-name>
-
-  	<servlet-class>com.star.user.UserAdminFrontController</servlet-class>
+  	<servlet-class>com.star.admin.UserAdminFrontController</servlet-class>
   </servlet>
   
    <servlet-mapping>

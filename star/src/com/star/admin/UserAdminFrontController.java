@@ -1,4 +1,4 @@
-package com.star.user;
+package com.star.admin;
 
 import java.io.IOException;
 

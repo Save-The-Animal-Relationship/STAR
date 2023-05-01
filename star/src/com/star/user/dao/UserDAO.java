@@ -10,6 +10,7 @@ import java.util.List;
 import org.apache.ibatis.session.SqlSession;
 
 import com.star.mybatis.config.MyBatisConfig;
+import com.star.user.domain.Search;
 import com.star.user.domain.UserVO;
 
 public class UserDAO {
@@ -97,6 +98,22 @@ public class UserDAO {
 		updateMap.put("userContent", userContent);
 		updateMap.put("userNumber", userNumber);
 		sqlSession.update("user.petSitterFormOk",updateMap);
+	}
+//	회원정보 조회 
+	
+	public List<UserVO> select(HashMap<String, Object> pagable){
+		return sqlSession.selectList("userAdmin.select", pagable);
+	}
+	
+//	전체 회원정보 개수 조회
+	public int getTotal(Search search) {
+		return sqlSession.selectOne("userAdmin.getTotal", search);
+	}
+
+	
+//	회원삭제
+	public void delete(Long userId) {
+		sqlSession.delete("userAdmin.delete", userId);
 	}
 
 
