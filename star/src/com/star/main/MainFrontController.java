@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.star.Result;
-import com.star.main.controller.SelectCurrentSitterController;
+import com.star.main.controller.MainController;
 
 public class MainFrontController extends HttpServlet {
 	
@@ -20,9 +20,11 @@ public class MainFrontController extends HttpServlet {
 		Result result = null;
 		
 		if(target.equals("main")) {
-			result = new SelectCurrentSitterController().execute(req, resp);
 			System.out.println("호잇");
-		}
+			result = new MainController().execute(req, resp);
+		} 
+		
+			
 		    
 	
 		
@@ -48,18 +50,3 @@ public class MainFrontController extends HttpServlet {
 	}
 }
 
-/*
- * req.setCharacterEncoding("UTF-8"); String target =
- * req.getRequestURI().replace(req.getContextPath()+"/", "").split("\\.")[0];
- * Result result = new Result(); System.out.println(target);
- * System.out.println("들어옴"); if(target.equals("main")) {
- * result.setPath("templates/mainpage.jsp");
- * 
- * }
- * 
- * if(result!=null) { if(result.isRedirect()) {
- * resp.sendRedirect(req.getContextPath()+"/"+result.getPath()); }else {
- * req.getRequestDispatcher(result.getPath()).forward(req, resp);
- * 
- * } }
- */

@@ -17,7 +17,6 @@ public class UserVO {
 
 	public UserVO() {;}
 
-
 	public Long getUserNumber() {
 		return userNumber;
 	}
@@ -139,8 +138,6 @@ public class UserVO {
 	}
 
 
-
-
 	@Override
 	public String toString() {
 		return "UserVO [userNumber=" + userNumber + ", userId=" + userId + ", userPassword=" + userPassword
@@ -179,11 +176,4 @@ public class UserVO {
 	
 	
 }
-	
-
-
-
-	
-	
-
 

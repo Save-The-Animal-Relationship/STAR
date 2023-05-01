@@ -76,9 +76,11 @@ public class UserDAO {
 		return sqlSession.selectList("user.selectAllSitter", keyword);
 	}
 
+//	메인페이지 돌봄이 신청자 가져오기
 	public List<UserVO> selectCurrentSitters(){
 		return sqlSession.selectList("user.selectCurrentSitters");
 	}
+	
 	
 	//이름바꾸기
 	public void updateName(String userName, Long userNumber) {

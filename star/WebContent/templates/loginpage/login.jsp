@@ -4,7 +4,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
+
 <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/loginpage/login.css" type="text/css">
+
 <title>로그인|STAR</title>
 </head>
 
@@ -53,5 +55,5 @@
 	</div>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="../../static/js/login.js"></script>
+<script src="${pageContext.request.contextPath}/static/js/login.js"></script>
 </html>
