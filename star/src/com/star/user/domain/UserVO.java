@@ -9,13 +9,13 @@ public class UserVO {
 	private String userPhonenumber;
 	private int userAge;
 	private String userGender;
-	private String userEmail;
 	private String userStatus;
 	private String userTitle;
 	private String userContent;
 	private int userStar;
-	private String userRegistrationDate;
-	private String userEndDate;
+	
+	public UserVO() {;}
+
 	public Long getUserNumber() {
 		return userNumber;
 	}
@@ -64,12 +64,7 @@ public class UserVO {
 	public void setUserGender(String userGender) {
 		this.userGender = userGender;
 	}
-	public String getUserEmail() {
-		return userEmail;
-	}
-	public void setUserEmail(String userEmail) {
-		this.userEmail = userEmail;
-	}
+
 	public String getUserStatus() {
 		return userStatus;
 	}
@@ -94,18 +89,21 @@ public class UserVO {
 	public void setUserStar(int userStar) {
 		this.userStar = userStar;
 	}
-	public String getUserRegistrationDate() {
-		return userRegistrationDate;
+
+
+ 
+
+	@Override
+	public String toString() {
+		return "UserVO [userNumber=" + userNumber + ", userId=" + userId + ", userPassword=" + userPassword
+				+ ", userName=" + userName + ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber
+				+ ", userAge=" + userAge + ", userGender=" + userGender + ", userStatus=" + userStatus + ", userTitle="
+				+ userTitle + ", userContent=" + userContent + ", userStar=" + userStar + "]";
 	}
-	public void setUserRegistrationDate(String userRegistrationDate) {
-		this.userRegistrationDate = userRegistrationDate;
-	}
-	public String getUserEndDate() {
-		return userEndDate;
-	}
-	public void setUserEndDate(String userEndDate) {
-		this.userEndDate = userEndDate;
-	}
+
+
+
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -113,7 +111,7 @@ public class UserVO {
 		result = prime * result + ((userNumber == null) ? 0 : userNumber.hashCode());
 		return result;
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -129,15 +127,14 @@ public class UserVO {
 		} else if (!userNumber.equals(other.userNumber))
 			return false;
 		return true;
-	}
-	@Override
-	public String toString() {
-		return "UserVO [userNumber=" + userNumber + ", userId=" + userId + ", userPassword=" + userPassword
-				+ ", userName=" + userName + ", userAddress=" + userAddress + ", userPhonenumber=" + userPhonenumber
-				+ ", userAge=" + userAge + ", userGender=" + userGender + ", userEmail=" + userEmail + ", userStatus="
-				+ userStatus + ", userTitle=" + userTitle + ", userContent=" + userContent + ", userStar=" + userStar
-				+ ", userRegistrationDate=" + userRegistrationDate + ", userEndDate=" + userEndDate + "]";
-	}
+
+
+
 	
+
+	}	
+
 	
 }
+	
+	

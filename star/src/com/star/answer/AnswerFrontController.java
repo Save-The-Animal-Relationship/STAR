@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.star.Result;
+import com.star.answer.controller.answerController;
 
 public class AnswerFrontController extends HttpServlet {
 	@Override
@@ -15,7 +16,13 @@ public class AnswerFrontController extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 
 		String target = req.getRequestURI().replace(req.getContextPath() + "/", "").split("\\.")[0];
-		Result result = null;
+		Result result = new Result();
+
+		if (target.equals("select")) {
+			result = new answerController().execute(req, resp);
+		} else if (target.equals("delete")) {
+			result = new answerController().execute(req, resp);
+		}
 
 
 		if (result != null) {

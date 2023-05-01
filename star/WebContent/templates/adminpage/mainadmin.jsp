@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>관리자 페이지</title>
-<link rel="stylesheet" href="../../static/css/adminpage/adminconstructor.css">
-<link rel="stylesheet" href="../../static/css/adminpage/mainadmin.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/adminconstructor.css">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/adminpage/mainadmin.css">
 
 </head>
 <body>
@@ -38,7 +39,7 @@
 								onClick="location.href='changeinfo.jsp'" />
 						</div>
 						<div>
-						<table class="tables">
+						<table class="tables1">
 								<thead>
 									<tr>
 										<th>이름</th>
@@ -51,31 +52,8 @@
 										<td>한지인</td>	
 										<td>1q2w3e4r</td>	
 										<td>22-01-21</td>	
-							</tr>
-									<tr>
-										<td>김동찬</td>	
-										<td>aeftw</td>	
-										<td>22-02-10</td>	
-									</tr>
-									<tr>
-										<td>김보령</td>	
-										<td>abcdefg</td>	
-										<td>80-01-01</td>	
-									</tr>
-									<tr>
-										<td>정상수</td>	
-										<td>dsfsd</td>	
-										<td>23-01-10</td>	
-									</tr>
-									<tr>
-										<td>홍윤기</td>	
-										<td>weqq12w</td>	
-										<td>23-04-20</td>	
 									</tr>
 								</tbody>
-							
-							
-							
 							</table>		
 						</div>
 					</div>
@@ -106,45 +84,15 @@
 										<td></td>	
 										<td></td>	
 									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
 								</tbody>
 							</table>			
-							
-							</div>
+						</div>
 					</div>
 				</div>
 				<div class="medium-box">
 					<div class="boxes">
 						<div>
 							<p>신고 목록</p>
-	
 							<input type="image" src="https://cdn1.iconfinder.com/data/icons/round-black-icons-2/78/plus-512.png" class="see-details"
 								onClick="location.href='reportlist.jsp'" />
 						</div>
@@ -164,30 +112,6 @@
 										<td>김진</td>	
 										<td>펫시터가 퀘스트로 올렸던 우리 뽀삐 ...</td>	
 										<td>2023/04/19</td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
-									</tr>
-									<tr>
-										<td></td>	
-										<td></td>	
-										<td></td>	
-										<td></td>	
 									</tr>
 								</tbody>
 							</table>			
@@ -216,36 +140,19 @@
 										<td></td>
 										<td></td>
 									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-									<tr>
-										<td></td>
-										<td></td>
-										<td></td>
-									</tr>
-									
 								</tbody>
 							</table>			
-							
-							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 </body>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+	let users = `${main}`;
+	let contextPath = `${pageContext.request.contextPath}`;
+</script>
+<script src="${pageContext.request.contextPath}/static/js/admin/main.js"></script>
 </html>
