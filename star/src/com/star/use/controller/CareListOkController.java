@@ -30,11 +30,11 @@ public class CareListOkController implements Action {
 		
 		HashMap<String, Object> pagable = new HashMap<String, Object>();
 		
-		pagable.put("offset", (page - 1) * 5);
-		pagable.put("rowCount", 5);
+		pagable.put("offset", (page - 1) * 6);
+		pagable.put("rowCount", 6);
 		pagable.put("userNumber",(Long)session.getAttribute("userNumber"));
 		useDAO.mycarelist(pagable).stream().map(item -> new JSONObject(item)).forEach(jsonArray::put);  
-	
+		System.out.println(useDAO.mycarelist(pagable));
 		PrintWriter out = resp.getWriter();
 		out.print(jsonArray.toString());
 		out.close();

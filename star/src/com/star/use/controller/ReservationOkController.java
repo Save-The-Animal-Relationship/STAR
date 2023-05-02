@@ -16,11 +16,12 @@ import com.star.Action;
 import com.star.Result;
 import com.star.use.dao.UseDAO;
 
-public class ReservationOk implements Action {
+public class ReservationOkController implements Action {
 
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-		  resp.setContentType("text/html;charset=utf-8");
+		  req.setCharacterEncoding("UTF-8");
+		  resp.setContentType("text/html;charset=UTF-8"); 
 	      UseDAO useDAO = new UseDAO();
 	      JSONArray jsonArray = new JSONArray();
 	      HttpSession session = req.getSession();
@@ -29,13 +30,13 @@ public class ReservationOk implements Action {
 	      
 	      HashMap<String, Object> pagable = new HashMap<String, Object>();
 	      
-	      pagable.put("offset", (page - 1) * 5);
-	      pagable.put("rowCount", 5);
+	      pagable.put("offset", (page - 1) * 6);
+	      pagable.put("rowCount", 6);
 	      pagable.put("userNumber",(Long)session.getAttribute("userNumber"));
 	      
 	      
 	      useDAO.selectUselist(pagable).stream().map(use -> new JSONObject(use)).forEach(jsonArray::put);
-
+	      System.out.println(useDAO.selectUselist(pagable));
 	      PrintWriter out = resp.getWriter();
 	      out.print(jsonArray.toString());
 	      out.close();
