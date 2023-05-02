@@ -24,7 +24,7 @@ public Result execute(HttpServletRequest req, HttpServletResponse resp) throws I
 	UserDAO userdao = new UserDAO();
 	HttpSession session = req.getSession();
 	Long userNumber = userdao.login(userId,userPassword);
-	
+	System.out.println(userNumber);
 	
 	if(userNumber == null) {
 		result.setRedirect(true);

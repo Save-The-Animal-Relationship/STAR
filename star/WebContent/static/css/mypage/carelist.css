@@ -280,7 +280,7 @@ header section .btn_srch {
 .reverse_list section:first-child {
 	padding-top: 0;
 	clear: both;
-	border-bottom: 1px solid rgba(0,0,0,0.2);
+
 }
 
 .reverse_list h3 {
@@ -288,6 +288,7 @@ header section .btn_srch {
 	padding: 0 0 20px 0;
 	font-size: 18px;
 	color: #388e3c;
+		border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
 .reverse_list section {

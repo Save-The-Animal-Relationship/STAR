@@ -23,13 +23,20 @@
     				src="../../static/image/3.png">
                 </div>
                 <h1>                 
-                    <a  id="bannertext">Save The Animal Relationship</a>
+                    <a  href="${pageContext.request.contextPath}/main.main"  id="bannertext">Save The Animal Relationship</a>
                 </h1>
                 <ul class="gnb_pc" >
                     <li><a class="bannertext" href="">내주변</a></li>
                     <li><a class="bannertext" href="">예약내역</a></li>
                     <li><a class="bannertext" href="">더보기</a></li>
-                    <li><a class="bannertext" href="">로그인</a></li>
+                   <c:choose>
+					<c:when test='${not empty sessionScope.userNumber}'>
+						<li><a class="bannertext" href="${pageContext.request.contextPath}/logout.user">로그아웃</a></li>
+					</c:when>	
+					<c:otherwise>
+						<li><a class="bannertext" href="${pageContext.request.contextPath}/login.user">로그인</a></li>
+					</c:otherwise>
+				</c:choose>
                 </ul>
             </section>
         </header>
@@ -51,7 +58,7 @@
 						<a href="javascript:location.href='${pageContext.request.contextPath}/careList.use'">돌봄 내역</a>
 					</li>
 					<li>
-						<a href="reservationlist.jsp">이용 내역</a>
+						<a href="javascript:location.href='${pageContext.request.contextPath}/reservation.use'">이용 내역</a>
 					</li>
 					<li>
 						<a href="javascript:location.href='${pageContext.request.contextPath}/review.review'">이용후기</a>
@@ -78,14 +85,12 @@
 								</div>
 							</section>
 							<section class="text_wrap">
-								<b>내용<c:out value="${user.userContent}"/></b>
+								<b>내용</b>
 								<div>
 									<textarea rows="" cols="" placeholder="돌보미가 됨에 있어 책임감을 가지고 신청해주세요." name="userContent"><c:out value="${user.userContent}"/></textarea>
 								</div> 
 							</section>
 							<section class="btn_wrap">
-									 <textarea rows="" cols="" placeholder="돌보미가 됨에 있어 책임감을 가지고 신청해주세요." name="userContent"></textarea>
-								</div>
 								<input type="hidden" value="${user.userNumber}">
 								<button class="btn_red_fill" type="submit">작성 완료</button>
 							</section>
