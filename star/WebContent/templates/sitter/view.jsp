@@ -73,6 +73,8 @@
                         <div><c:out value="${user.userPhonenumber}"/></div>
                     </div>
                 </div>
+                
+                
             </div>
             
             <div style="margin:39px;padding-bottom:32px;border-bottom:1px solid #EBEBEB">
