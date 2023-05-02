@@ -14,6 +14,7 @@
   <servlet-name>Main</servlet-name>
   <servlet-class>com.star.main.MainFrontController</servlet-class>
   </servlet>
+  
   <servlet-mapping>
   <servlet-name>Main</servlet-name>
   <url-pattern>*.main</url-pattern>
@@ -88,7 +89,7 @@
   
   <servlet>
   	<servlet-name>Use</servlet-name>
-  	<servlet-class>com.star.Use.UseFrontController</servlet-class>
+  	<servlet-class>com.star.use.UseFrontController</servlet-class>
   </servlet>
   
   <servlet-mapping>

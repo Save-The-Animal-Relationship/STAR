@@ -10,7 +10,7 @@ function next_load() {
    $.ajax({
       type: "POST",
 	data: { page: page },
-      url: contextPath + `/careListOk.use`,	
+      url: contextPath + `/reservationListOk.use`,	
 		beforeSend: function() {
          $('.wrap-loading').removeClass('display-none');
       },
@@ -69,7 +69,7 @@ function showList(result){
 										<span>${use.useUsedDate}</span>
 									</a>
 									<p class="btn_re">
-										<a href="">후기보기</a>
+										<a href="">후기작성하러가기</a>
 									</p>
 									
 									<div class="css-report-delete">

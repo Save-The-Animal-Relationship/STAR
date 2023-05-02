@@ -22,13 +22,20 @@
     				src="../../static/image/3.png">
                 </div>
                 <h1>                 
-                    <a href="" id="bannertext">Save The Animal Relationship</a>
+                    <a  href="${pageContext.request.contextPath}/main.main"  id="bannertext">Save The Animal Relationship</a>
                 </h1>
                 <ul class="gnb_pc" >
                     <li><a class="bannertext" href="">내주변</a></li>
                     <li><a class="bannertext" href="">예약내역</a></li>
                     <li><a class="bannertext" href="">더보기</a></li>
-                    <li><a class="bannertext" href="">로그인</a></li>
+                    <c:choose>
+					<c:when test='${not empty sessionScope.userNumber}'>
+						<li><a class="bannertext" href="${pageContext.request.contextPath}/logout.user">로그아웃</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a class="bannertext" href="${pageContext.request.contextPath}/login.user">로그인</a></li>
+					</c:otherwise>
+				</c:choose>
                 </ul>
             </section>
         </header>
@@ -50,10 +57,12 @@
 						<a href="javascript:location.href='${pageContext.request.contextPath}/careList.use'">돌봄 내역</a>
 					</li>
 					<li>
-						<a href="reservationlist.jsp">이용 내역</a>
+						<a href="javascript:location.href='${pageContext.request.contextPath}/reservation.use'">이용 내역</a>
 					</li>
 					<li>
 						<a href="javascript:location.href='${pageContext.request.contextPath}/review.review'">이용후기</a>
+						</li>
+						<li>
 						<a href="javascript:location.href='${pageContext.request.contextPath}/report.report'">신고목록</a>
 					</li>
 				</ul>

@@ -32,8 +32,16 @@
 				<ul class="gnb_pc">
 					<li><a class="bannertext" href="">내주변</a></li>
 					<li><a class="bannertext" href="">예약내역</a></li>
-					<li><a class="bannertext" href="">더보기</a></li>
-					<li><a class="bannertext" href="">로그인</a></li>
+					<li><a class="bannertext" href="${pageContext.request.contextPath}/myInfo.user">더보기</a></li>
+					
+					<c:choose>
+					<c:when test='${not empty sessionScope.userNumber}'>
+						<li><a class="bannertext" href="${pageContext.request.contextPath}/logout.user">로그아웃</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a class="bannertext" href="${pageContext.request.contextPath}/login.user">로그인</a></li>
+					</c:otherwise>
+				</c:choose>
 				</ul>
 			</section>
 		</header>
